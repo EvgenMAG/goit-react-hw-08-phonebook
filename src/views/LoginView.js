@@ -2,17 +2,7 @@ import React, { Component } from 'react';
 
 import { OperationsAuth } from '../redux/auth';
 import { connect } from 'react-redux';
-
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
+import s from './views.module.css';
 
 class RegisterView extends Component {
   state = {
@@ -39,11 +29,11 @@ class RegisterView extends Component {
     const { handleChange, handleSubmit } = this;
     const { email, password } = this.state;
     return (
-      <div>
+      <div className={s.container}>
         <h1>Login</h1>
 
-        <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
-          <label style={styles.label}>
+        <form onSubmit={handleSubmit} className={s.form} autoComplete="off">
+          <label className={s.label}>
             Email
             <input
               type="email"
@@ -53,7 +43,7 @@ class RegisterView extends Component {
             />
           </label>
 
-          <label style={styles.label}>
+          <label className={s.label}>
             Password
             <input
               type="password"

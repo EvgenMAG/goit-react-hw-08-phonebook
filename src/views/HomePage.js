@@ -1,22 +1,9 @@
 import React from 'react';
-
-const styles = {
-  container: {
-    minHeight: 'calc(100vh - 50px)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontWeight: 500,
-    fontSize: 48,
-    textAlign: 'center',
-  },
-};
+import s from './views.module.css';
 
 const HomeView = () => (
-  <div style={styles.container}>
-    <h1 style={styles.title}>
+  <div className={s.homeContainer}>
+    <h1 className={s.homeTitle}>
       The best ever store for your Contacts{' '}
       <span role="img" aria-label="Иконка приветствия">
         💁‍♀️
